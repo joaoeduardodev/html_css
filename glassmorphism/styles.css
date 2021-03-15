@@ -19,13 +19,12 @@ body{
 .glassmorphism {
     width: min(70vw, 500px);
     margin: auto;
-    background: rgba( 255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
     backdrop-filter: blur( 4.0px);
     -webkit-backdrop-filter: blur( 4.0px);
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
     padding: 20px 0 40px 0;
+    box-shadow: 0 28px 56px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);;
+    border:none;
+    border-radius: 26px;
 }
 .login{
     display: flex;
@@ -48,8 +47,9 @@ label{
 input{
     padding: 5px;
     border-radius: 5px;
-    color: #000;
+    color: #fff;
     border: none;
+    background-color: rgba(255, 255, 255,0.25);
 }
 
 
@@ -57,11 +57,7 @@ input{
     position:relative;
     background-color: rgba(255, 255, 255,0.1);
     padding: 60px;
-    color:#008eb5;
-    border-radius: 25px;
-    border: solid 2px transparent;
      background-clip: padding-box;
-    box-shadow: 10px 10px 10px  rgba(46, 54, 68, 0.03);
     backdrop-filter: blur(50px);
     overflow:hidden;
     cursor: pointer;
