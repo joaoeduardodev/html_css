@@ -19,12 +19,17 @@ body{
 .glassmorphism {
     width: min(70vw, 500px);
     margin: auto;
-    backdrop-filter: blur( 4.0px);
-    -webkit-backdrop-filter: blur( 4.0px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 20px 0 40px 0;
     box-shadow: 0 28px 56px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);;
     border:none;
     border-radius: 26px;
+    position:relative;
+    background-color: rgba(255, 255, 255,0.1);
+    background-clip: padding-box;
+    overflow:hidden;
+    cursor: pointer;
 }
 .login{
     display: flex;
@@ -43,39 +48,31 @@ label{
     color: #fff;
     border: none;
     font-size: 20px;
+    font-weight: bold;
 }
 input{
-    padding: 5px;
+    padding: 0.5rem;
     border-radius: 5px;
+    font-size: 1rem;
     color: #fff;
     border: none;
     background-color: rgba(255, 255, 255,0.25);
 }
-
-
-.glass-morphism-container-hover-effect{
-    position:relative;
-    background-color: rgba(255, 255, 255,0.1);
-    padding: 60px;
-     background-clip: padding-box;
-    backdrop-filter: blur(50px);
-    overflow:hidden;
+button{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    background-color: rgba(255, 255, 255,0.25);
     cursor: pointer;
-  }
+    transition: 0.5s;
+    font-weight: bold;
+}
+button:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}
+
   
-  .glass-morphism-container-hover-effect::before{
-    --size: 0;
-      content: '';
-      position: absolute;
-      left: var(--x);
-      top: var(--y);
-      width: var(--size);
-      height: var(--size);
-      background: radial-gradient(circle closest-side, rgba(255, 255, 255,0.2), transparent);
-      transform: translate(-50%, -50%);
-      transition: width .2s ease, height .2s ease;
-  }
   
-  .glass-morphism-container-hover-effect:hover::before{
-    --size: 400px;
-  }
