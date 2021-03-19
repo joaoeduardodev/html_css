@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=1,initial-scale=1.0">
     <title>Glassmorphism</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -12,22 +11,25 @@
 <body>
     <div class="bg">
         <div class="glassmorphism">
-            <div class="login">
+            <form class="login">
+
 
                 <h1>Login</h1>
                 
                 <label for="email">E-mail</label>
-                <input type="text" name="email" id="email">
+                <input type="email" name="email" id="email" required>
                 
                 <label for="senha">Senha</label>
-                <input type="text" name="senha" id="senha">
+                <input type="current-password" name="senha" id="senha" required>
 
-                <button type="submit">Acessar</button>
+                <button type="submit" id="btnAcessar" onclick="alert('É ótimo ter você por aqui !!!')">
+                    Acessar
+                </button>
 
-            </div>
+            </form>
         </div>
     </div>
-    
+    <div class="assinatura"><a target="_blank" href="https://github.com/joaoeduardodev">github.com/joaoeduardodev</a></div>
     <script src="script.js"></script>
 </body>
 </html>
