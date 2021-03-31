@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+
+        #logo {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: red;
+            transition: all 2s;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        
+      
+
+    </style>
+</head>
+
+<body>
+    <div id="logo"></div>
+
+</body>
+
+<script>
+    var bod = document.getElementsByTagName('body')[0].offsetWidth;
+    
+    var logo = document.getElementById('logo');
+
+    logo.onclick = function(){
+
+        bod*10
+ 
+    logo.style.transform = "scale(calc("+bod/10+"))";
+    console.log(bod);
+    // .logo:hover {
+    //         transform: scale(calc(100%));
+    //     }
+    // bod.classList.add('focus');
+}
+      
+</script>
+
+</html>
