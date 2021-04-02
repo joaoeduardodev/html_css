@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
+       
+       * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        
+        #div{
+            height: 100vh;
+        }
 
         #logo {
             width: 10px;
@@ -26,26 +29,35 @@
             left: 50%;
         }
         
+
+        
       
 
     </style>
 </head>
 
 <body>
-    <div id="logo"></div>
+    
+    <div id="div">
+        <div id="logo"></div>
+    
 
 </body>
 
 <script>
-    var bod = document.getElementsByTagName('body')[0].offsetWidth;
+    var bodyWidth = document.getElementsByTagName('body')[0].offsetWidth;
+    var bodyHeight = document.getElementById('div').offsetHeight;
+
     
     var logo = document.getElementById('logo');
 
     logo.onclick = function(){
 
  
-    logo.style.transform = "scale(calc("+bod/10+"))";
-    console.log(bod);
+    logo.style.transform = "scaleX(calc("+(bodyWidth-5)/10+")) scaleY(calc("+(bodyHeight-5)/10+")) ";
+    
+    //logo.style.transform = "scaleX(calc("+(bodyWidth-10)/10+")) ";
+    //logo.style.transform = "scaleY(calc("+(bodyHeight-10)/10+")) ";
     // .logo:hover {
     //         transform: scale(calc(100%));
     //     }
@@ -53,5 +65,6 @@
 }
       
 </script>
+
 
 </html>
